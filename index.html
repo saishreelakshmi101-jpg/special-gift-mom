@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>A Surprise For You</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts for aesthetic text -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Outfit:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <audio id="bg-music" src="music/song.mp3" loop preload="auto"></audio>
+    <audio id="pop-sound" src="https://assets.mixkit.co/active_storage/sfx/2573/2573-preview.mp3" preload="auto"></audio>
+    
+    <canvas id="confetti-canvas"></canvas>
+
+    <!-- Intro Screen -->
+    <div id="intro-screen" class="screen active">
+        <div class="intro-content">
+            <div class="profile-container">
+                <img src="images/photo1.jpg" alt="Profile" class="profile-img">
+                <div class="glow-effect"></div>
+            </div>
+            <h1 id="typing-text"></h1>
+            <button id="next-btn" class="pulse-btn">NEXT</button>
+        </div>
+        <!-- Background intro balloons -->
+        <div class="bg-balloons" id="bg-balloons"></div>
+    </div>
+
+    <!-- Balloon Interaction Screen -->
+    <div id="balloon-screen" class="screen hidden">
+        <div class="balloon-container" id="balloon-container"></div>
+        
+        <!-- Photo Reveal Modal -->
+        <div id="photo-modal" class="modal hidden">
+            <div class="modal-content">
+                <img id="revealed-photo" src="" alt="Revealed">
+                <p id="revealed-message" class="message-text"></p>
+                <button id="continue-btn">Continue</button>
+            </div>
+        </div>
+
+        <!-- Final Message -->
+        <div id="final-message" class="hidden">
+            <h1>Thank you for being in my life ❤️</h1>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
